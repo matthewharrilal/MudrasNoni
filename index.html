@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naruto Gesture Constellation - MediaPipe Foundation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Status Panel -->
+        <div class="status-panel">
+            <h1>🥷 Naruto Gesture Detection</h1>
+            <div class="status-grid">
+                <div class="status-item">
+                    <span class="label">Camera:</span>
+                    <span id="camera-status" class="value">Initializing...</span>
+                </div>
+                <div class="status-item">
+                    <span class="label">Hands Detected:</span>
+                    <span id="hands-count" class="value">0</span>
+                </div>
+                <div class="status-item">
+                    <span class="label">FPS:</span>
+                    <span id="fps-counter" class="value">0</span>
+                </div>
+                <div class="status-item">
+                    <span class="label">Next Step:</span>
+                    <span class="value">Tiger Hand Sign Detection</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video Container -->
+        <div class="video-container">
+            <video id="video" autoplay muted playsinline></video>
+            <canvas id="landmark-canvas"></canvas>
+            <div class="video-overlay">
+                <p id="instruction-text">Hold your hands in front of the camera</p>
+            </div>
+        </div>
+
+        <!-- Debug Panel (Toggle-able) -->
+        <div class="debug-panel" id="debug-panel" style="display: none;">
+            <h3>Debug Information</h3>
+            <pre id="landmark-data"></pre>
+        </div>
+        
+        <button id="debug-toggle" class="debug-btn">Show Debug</button>
+    </div>
+
+    <!-- MediaPipe CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
