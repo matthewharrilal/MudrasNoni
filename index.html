@@ -25,6 +25,14 @@
                     <span id="fps-counter" class="value">0</span>
                 </div>
                 <div class="status-item">
+                    <span class="label">Gesture:</span>
+                    <span id="gesture-status" class="value">None</span>
+                </div>
+                <div class="status-item">
+                    <span class="label">Confidence:</span>
+                    <span id="confidence-level" class="value">0%</span>
+                </div>
+                <div class="status-item">
                     <span class="label">Next Step:</span>
                     <span class="value">Tiger Hand Sign Detection</span>
                 </div>
@@ -35,6 +43,7 @@
         <div class="video-container">
             <video id="video" autoplay muted playsinline></video>
             <canvas id="landmark-canvas"></canvas>
+            <canvas id="particle-canvas"></canvas>
             <div class="video-overlay">
                 <p id="instruction-text">Hold your hands in front of the camera</p>
             </div>
